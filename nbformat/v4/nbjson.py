@@ -46,6 +46,7 @@ class JSONWriter(NotebookWriter):
         kwargs['cls'] = BytesEncoder
         kwargs['indent'] = 1
         kwargs['sort_keys'] = True
+        kwargs['allow_nan'] = True
         kwargs['separators'] = (',',': ')
         kwargs.setdefault('ensure_ascii', False)
         # don't modify in-memory dict
